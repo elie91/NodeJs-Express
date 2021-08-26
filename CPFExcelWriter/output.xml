@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<lheo
+	xmlns="https://www.of.moncompteformation.gouv.fr">
+	<offres>
+		<formation numero="ANGLAIS-690" datemaj="20210725" datecrea="20210725">
+			<intitule-formation>ANGLAIS </intitule-formation>
+			<objectif-formation>
+				<![CDATA[-         Les objectifs personnalisés de votre formation seront établis en fonction de votre niveau et de vos besoins, à la suite d'un bilan réalisé en début de parcours.
+-         Développement des capacités à communiquer à l'oral et à l'écrit, dans des situations courantes et professionnelles.
+-         Acquisition de lexique selon le niveau
+-         Mise en pratique des points grammaticaux en contexte
+-         Remise à niveau et réactivation des compétences passives]]>
+			</objectif-formation>
+			<resultats-attendus>-         Compétences opérationnelles mobilisables immédiatement&#xD;
+-         Certification PIPPLET FLEX qui validera les compétences acquises lors de la formation et attestera le développement de vos capacités auprès de votre employeur et sur votre CV &#xD;
+-         Développement des capacités à communiquer avec plus d'aisance et d'utiliser la langue de façon efficace et souple dans sa vie sociale, académique ou professionnelle. Vos progrès seront validés par un bilan mesurant le l'évolution de votre niveau en fonction des objectifs définis en début de formation.</resultats-attendus>
+			<contenu-formation>
+				<![CDATA[- Accès illimité à la plateforme E-learning pendant 2 semaines (Un accès supplémentaire post-formation sera accessible pour les stagiaires motivés, veuillez contacter nos conseillers en formation pour plus d’information)
+- Audit : l'audit Online permet d'identifier vos besoins puis de prédéfinir votre programme de formation individuel en fonction de votre niveau et de vos objectifs.
+- D-Learning : Parcours Professionnel ou social, le contenu personnalisé en fonction du niveau, objectifs et métier et/ou intérêts personnels
+- Leçons digitales avec plus de 15 activités différentes conçues pour l'acquisition et la progression linguistiques. Les types d'activités sont: vidéo Learning, compréhension orale et écrites, dialogues interactifs, textes à trous, QCM, travail sur des articles de presse, etc. 
+- Supports pédagogiques adaptés : en lien direct avec l'audit, les supports de cours sont adaptés en fonction de votre niveau et de vos objectifs, vous pourrez ainsi travailler la grammaire, le vocabulaire et la syntaxe.
+- Full Engagement : un ou une coach pédagogique dédié(e) suivra l'évolution de votre parcours]]>
+			</contenu-formation>
+			<parcours-de-formation>2</parcours-de-formation>
+			<objectif-general-formation>6</objectif-general-formation>
+			<certification>
+				<code-CERTIFINFO>15254</code-CERTIFINFO>
+			</certification>
+			<action numero="ANGLAIS-690" datemaj="20210725" datecrea="20210725">
+				<niveau-entree-obligatoire>0</niveau-entree-obligatoire>
+				<modalites-enseignement>2</modalites-enseignement>
+				<conditions-specifiques/>
+				<lieu-de-formation>
+					<coordonnees numero="ANGLAIS-690">
+						<nom>AMAR</nom>
+						<prenom>NATHAN</prenom>
+						<adresse numero="2">
+							<ligne>MA COMPETENCE EN PLUS</ligne>
+							<codepostal>94220</codepostal>
+							<ville>CHARENTON LE PONT</ville>
+							<geolocalisation>
+								<latitude/>
+								<longitude/>
+							</geolocalisation>
+							<extras info="adresse">
+								<extra info="numero-voie"/>
+								<extra info="code-nature-voie"/>
+								<extra info="libelle-voie"/>
+							</extras>
+						</adresse>
+						<telfixe>
+							<numtel>646799213</numtel>
+						</telfixe>
+						<courriel>contact@mc-plus.fr</courriel>
+					</coordonnees>
+				</lieu-de-formation>
+				<modalites-entrees-sorties>0</modalites-entrees-sorties>
+				<url-action>
+					<urlweb>https://mc-plus.fr/</urlweb>
+				</url-action>
+				<session numero="ANGLAIS-690" datemaj="20210725" datecrea="20210725">
+					<periode>
+						<debut>20210725</debut>
+						<fin>20220725</fin>
+					</periode>
+					<adresse-inscription>
+						<adresse numero="1">
+							<ligne>MA COMPETENCE EN PLUS</ligne>
+							<codepostal>94220</codepostal>
+							<ville>charenton le pont</ville>
+							<geolocalisation>
+								<latitude/>
+								<longitude/>
+							</geolocalisation>
+							<extras info="adresse">
+								<extra info="numero-voie">86</extra>
+								<extra info="code-nature-voie">AVENUE</extra>
+								<extra info="libelle-voie">DU PETIT CHÂTEAU</extra>
+							</extras>
+						</adresse>
+					</adresse-inscription>
+					<etat-recrutement>1</etat-recrutement>
+					<extras info="session">
+						<extra info="contact-inscription">
+							<coordonnees>
+								<nom>AMAR</nom>
+								<prenom>NATHAN</prenom>
+								<telfixe>
+									<numtel/>
+								</telfixe>
+								<courriel>contact@mc-plus.fr</courriel>
+							</coordonnees>
+						</extra>
+					</extras>
+				</session>
+				<adresse-information>
+					<adresse>
+						<ligne>MA COMPETENCE EN PLUS</ligne>
+						<codepostal>94220</codepostal>
+						<ville>CHARENTON LE PONT</ville>
+						<geolocalisation>
+							<latitude/>
+							<longitude/>
+						</geolocalisation>
+						<extras>
+							<extra info="ligne5-adresse"/>
+							<extra info="conformite-reglementaire"/>
+						</extras>
+					</adresse>
+				</adresse-information>
+				<restauration/>
+				<hebergement/>
+				<transport/>
+				<acces-handicapes>Formation en ligne et accessible  aux personnes en situation de handicap0</acces-handicapes>
+				<langue-formation>FR</langue-formation>
+				<modalites-recrutement>Aucune</modalites-recrutement>
+				<modalites-pedagogiques/>
+				<code-perimetre-recrutement/>
+				<infos-perimetre-recrutement/>
+				<nombre-heures-centre/>
+				<nombre-heures-entreprise/>
+				<extras info="action">
+					<extra info="contact-information">
+						<coordonnees>
+							<nom>AMAR</nom>
+							<prenom>NATHAN</prenom>
+							<telfixe>
+								<numtel>646799213</numtel>
+							</telfixe>
+							<courriel>contact@mc-plus.fr</courriel>
+						</coordonnees>
+					</extra>
+				</extras>
+			</action>
+			<organisme-formation-responsable>
+				<SIRET-organisme-formation>
+					<SIRET>90030176300018</SIRET>
+				</SIRET-organisme-formation>
+			</organisme-formation-responsable>
+			<extras info="formation">
+				<extra info="resume-contenu">ANGLAIS</extra>
+			</extras>
+		</formation>
+		<formation numero="ANGLAIS-990" datemaj="20210725" datecrea="20210725">
+			<intitule-formation>ANGLAIS </intitule-formation>
+			<objectif-formation>
+				<![CDATA[-         Les objectifs personnalisés de votre formation seront établis en fonction de votre niveau et de vos besoins, à la suite d'un bilan réalisé en début de parcours.
+-         Développement des capacités à communiquer à l'oral et à l'écrit, dans des situations courantes et professionnelles.
+-         Acquisition de lexique selon le niveau
+-         Mise en pratique des points grammaticaux en contexte
+-         Remise à niveau et réactivation des compétences passives]]>
+			</objectif-formation>
+			<resultats-attendus>-         Compétences opérationnelles mobilisables immédiatement&#xD;
+-         Certification PIPPLET FLEX qui validera les compétences acquises lors de la formation et attestera le développement de vos capacités auprès de votre employeur et sur votre CV &#xD;
+-         Développement des capacités à communiquer avec plus d'aisance et d'utiliser la langue de façon efficace et souple dans sa vie sociale, académique ou professionnelle. Vos progrès seront validés par un bilan mesurant le l'évolution de votre niveau en fonction des objectifs définis en début de formation.</resultats-attendus>
+			<contenu-formation>
+				<![CDATA[- Accès illimité à la plateforme E-learning pendant 2 semaines (Un accès supplémentaire post-formation sera accessible pour les stagiaires motivés, veuillez contacter nos conseillers en formation pour plus d’information)
+- Audit : l'audit Online permet d'identifier vos besoins puis de prédéfinir votre programme de formation individuel en fonction de votre niveau et de vos objectifs.
+- D-Learning : Parcours Professionnel ou social, le contenu personnalisé en fonction du niveau, objectifs et métier et/ou intérêts personnels
+- Leçons digitales avec plus de 15 activités différentes conçues pour l'acquisition et la progression linguistiques. Les types d'activités sont: vidéo Learning, compréhension orale et écrites, dialogues interactifs, textes à trous, QCM, travail sur des articles de presse, etc. 
+- Classe virtuelle : Animés par nos formateurs natifs expérimentés, disponibles dans la plateforme E-learning 24/7 qui permettent de travailler les compétences à l'orale dans une structure décontractée avec des apprenants du monde entier. Chaque cours s'organise autour d'un thème de discussion (professionnel ou général) 
+- Supports pédagogiques adaptés : en lien direct avec l'audit, les supports de cours sont adaptés en fonction de votre niveau et de vos objectifs, vous pourrez ainsi travailler la grammaire, le vocabulaire et la syntaxe.
+- Full Engagement : un ou une coach pédagogique dédié(e) suivra l'évolution de votre parcours]]>
+			</contenu-formation>
+			<parcours-de-formation>2</parcours-de-formation>
+			<objectif-general-formation>6</objectif-general-formation>
+			<certification>
+				<code-CERTIFINFO>15254</code-CERTIFINFO>
+			</certification>
+			<action numero="ANGLAIS-990" datemaj="20210725" datecrea="20210725">
+				<niveau-entree-obligatoire>0</niveau-entree-obligatoire>
+				<modalites-enseignement>2</modalites-enseignement>
+				<conditions-specifiques/>
+				<lieu-de-formation>
+					<coordonnees numero="ANGLAIS-990">
+						<nom>AMAR</nom>
+						<prenom>NATHAN</prenom>
+						<adresse numero="2">
+							<ligne>MA COMPETENCE EN PLUS</ligne>
+							<codepostal>94221</codepostal>
+							<ville>CHARENTON LE PONT</ville>
+							<geolocalisation>
+								<latitude/>
+								<longitude/>
+							</geolocalisation>
+							<extras info="adresse">
+								<extra info="numero-voie"/>
+								<extra info="code-nature-voie"/>
+								<extra info="libelle-voie"/>
+							</extras>
+						</adresse>
+						<telfixe>
+							<numtel>646799213</numtel>
+						</telfixe>
+						<courriel>contact@mc-plus.fr</courriel>
+					</coordonnees>
+				</lieu-de-formation>
+				<modalites-entrees-sorties>0</modalites-entrees-sorties>
+				<url-action>
+					<urlweb>https://mc-plus.fr/</urlweb>
+				</url-action>
+				<session numero="ANGLAIS-990" datemaj="20210725" datecrea="20210725">
+					<periode>
+						<debut>20210725</debut>
+						<fin>20220725</fin>
+					</periode>
+					<adresse-inscription>
+						<adresse numero="1">
+							<ligne>MA COMPETENCE EN PLUS</ligne>
+							<codepostal>94220</codepostal>
+							<ville>charenton le pont</ville>
+							<geolocalisation>
+								<latitude/>
+								<longitude/>
+							</geolocalisation>
+							<extras info="adresse">
+								<extra info="numero-voie">86</extra>
+								<extra info="code-nature-voie">AVENUE</extra>
+								<extra info="libelle-voie">DU PETIT CHÂTEAU</extra>
+							</extras>
+						</adresse>
+					</adresse-inscription>
+					<etat-recrutement>1</etat-recrutement>
+					<extras info="session">
+						<extra info="contact-inscription">
+							<coordonnees>
+								<nom>AMAR</nom>
+								<prenom>NATHAN</prenom>
+								<telfixe>
+									<numtel/>
+								</telfixe>
+								<courriel>contact@mc-plus.fr</courriel>
+							</coordonnees>
+						</extra>
+					</extras>
+				</session>
+				<adresse-information>
+					<adresse>
+						<ligne>MA COMPETENCE EN PLUS</ligne>
+						<codepostal>94220</codepostal>
+						<ville>CHARENTON LE PONT</ville>
+						<geolocalisation>
+							<latitude/>
+							<longitude/>
+						</geolocalisation>
+						<extras>
+							<extra info="ligne5-adresse"/>
+							<extra info="conformite-reglementaire"/>
+						</extras>
+					</adresse>
+				</adresse-information>
+				<restauration/>
+				<hebergement/>
+				<transport/>
+				<acces-handicapes>Formation en ligne et accessible  aux personnes en situation de handicap1</acces-handicapes>
+				<langue-formation>FR</langue-formation>
+				<modalites-recrutement>Aucune</modalites-recrutement>
+				<modalites-pedagogiques/>
+				<code-perimetre-recrutement/>
+				<infos-perimetre-recrutement/>
+				<nombre-heures-centre/>
+				<nombre-heures-entreprise/>
+				<extras info="action">
+					<extra info="contact-information">
+						<coordonnees>
+							<nom>AMAR</nom>
+							<prenom>NATHAN</prenom>
+							<telfixe>
+								<numtel>646799213</numtel>
+							</telfixe>
+							<courriel>contact@mc-plus.fr</courriel>
+						</coordonnees>
+					</extra>
+				</extras>
+			</action>
+			<organisme-formation-responsable>
+				<SIRET-organisme-formation>
+					<SIRET>90030176300018</SIRET>
+				</SIRET-organisme-formation>
+			</organisme-formation-responsable>
+			<extras info="formation">
+				<extra info="resume-contenu">ANGLAIS</extra>
+			</extras>
+		</formation>
+	</offres>
+</lheo>

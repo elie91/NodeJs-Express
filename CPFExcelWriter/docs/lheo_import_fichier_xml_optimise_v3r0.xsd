@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.gelaba.org/gml/1.1" targetNamespace="https://www.of.moncompteformation.gouv.fr" xmlns:lheo="https://www.of.moncompteformation.gouv.fr" elementFormDefault="qualified">
+  
+  <xs:simpleType name="intitule-formation-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="intitule-formation" type="lheo:intitule-formation-type"/>
+ 
+ 
+  <xs:simpleType name="objectif-formation-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3000"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="objectif-formation" type="lheo:objectif-formation-type"/>
+  
+  <xs:simpleType name="resultats-attendus-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3000"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="resultats-attendus" type="lheo:resultats-attendus-type"/>
+  
+  <xs:simpleType name="contenu-formation-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3000"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="contenu-formation" type="lheo:contenu-formation-type"/>
+    
+  <xs:simpleType name="niveau-entree-obligatoire-type">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="niveau-entree-obligatoire" type="lheo:niveau-entree-obligatoire-type"/>
+  
+  <xs:simpleType name="parcours-de-formation-type">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="parcours-de-formation" type="lheo:parcours-de-formation-type"/>
+  
+  <xs:simpleType name="objectif-general-formation-type">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="6"/>
+      <xs:enumeration value="7"/>
+      <xs:enumeration value="8"/>
+      <xs:enumeration value="5"/>
+      <xs:enumeration value="9"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="objectif-general-formation" type="lheo:objectif-general-formation-type"/>
+  
+  <xs:complexType name="certification-type">
+    <xs:sequence>
+      <xs:element ref="lheo:code-CERTIFINFO" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="certification" type="lheo:certification-type"/>
+
+  <xs:complexType name="lheo-type">
+    <xs:sequence>
+      <xs:element ref="lheo:offres" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:extras" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="lheo" type="lheo:lheo-type"/>
+  
+  <xs:complexType name="offres-type">
+    <xs:sequence>
+      <xs:element ref="lheo:formation" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element ref="lheo:extras" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="offres" type="lheo:offres-type"/>
+  
+  <xs:attributeGroup name="formation-attributes">
+    <xs:attribute name="numero" type="xs:string" use="required"/>
+    <xs:attribute name="datemaj" type="xs:string" use="required"/>
+    <xs:attribute name="datecrea" type="xs:string" use="required"/>
+  </xs:attributeGroup>
+  
+  <xs:complexType name="formation-subtype">
+    <xs:sequence>
+      <xs:element ref="lheo:intitule-formation" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:objectif-formation" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:resultats-attendus" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:contenu-formation" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:parcours-de-formation" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:objectif-general-formation" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:certification" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:action" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element ref="lheo:organisme-formation-responsable" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:extras" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="formation-type">
+    <xs:complexContent>
+      <xs:extension base="lheo:formation-subtype">
+        <xs:attributeGroup ref="lheo:formation-attributes"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="formation" type="lheo:formation-type"/>
+  
+  <xs:attributeGroup name="action-attributes">
+    <xs:attribute name="numero" type="xs:string" use="required"/>
+    <xs:attribute name="datemaj" type="xs:string" use="required"/>
+    <xs:attribute name="datecrea" type="xs:string" use="required"/>
+  </xs:attributeGroup>
+  <xs:complexType name="action-subtype">
+    <xs:sequence>
+      <xs:element ref="lheo:niveau-entree-obligatoire" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:modalites-enseignement" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:conditions-specifiques" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:lieu-de-formation" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:modalites-entrees-sorties" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:url-action" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:session" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element ref="lheo:adresse-information" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:date-information" minOccurs="0" maxOccurs="3"/>
+      <xs:element ref="lheo:restauration" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:hebergement" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:transport" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:acces-handicapes" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:langue-formation" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:modalites-recrutement" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:modalites-pedagogiques" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:code-perimetre-recrutement" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:infos-perimetre-recrutement" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:nombre-heures-centre" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:nombre-heures-entreprise" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:extras" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="action-type">
+    <xs:complexContent>
+      <xs:extension base="lheo:action-subtype">
+        <xs:attributeGroup ref="lheo:action-attributes"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="action" type="lheo:action-type"/>
+  
+  <xs:complexType name="organisme-formation-responsable-type">
+    <xs:sequence>
+      <xs:element ref="lheo:SIRET-organisme-formation" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="organisme-formation-responsable" type="lheo:organisme-formation-responsable-type"/>
+  
+  <xs:simpleType name="modalites-enseignement-type">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="modalites-enseignement" type="lheo:modalites-enseignement-type"/>
+  
+  <xs:simpleType name="conditions-specifiques-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3000"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="conditions-specifiques" type="lheo:conditions-specifiques-type"/>
+  
+  <xs:simpleType name="langue-formation-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="langue-formation" type="lheo:langue-formation-type"/>
+  
+  <xs:complexType name="lieu-de-formation-type">
+    <xs:sequence>
+      <xs:element ref="lheo:coordonnees" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:extras" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="lieu-de-formation" type="lheo:lieu-de-formation-type"/>
+  
+  <xs:simpleType name="modalites-entrees-sorties-type">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="modalites-entrees-sorties" type="lheo:modalites-entrees-sorties-type"/>
+  
+  <xs:attributeGroup name="session-attributes">
+    <xs:attribute name="numero" type="xs:string" use="required"/>
+    <xs:attribute name="datemaj" type="xs:string" use="required"/>
+    <xs:attribute name="datecrea" type="xs:string" use="required"/>
+  </xs:attributeGroup>
+  <xs:complexType name="session-subtype">
+    <xs:sequence>
+      <xs:element ref="lheo:periode" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:adresse-inscription" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:etat-recrutement" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:extras" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="session-type">
+    <xs:complexContent>
+      <xs:extension base="lheo:session-subtype">
+        <xs:attributeGroup ref="lheo:session-attributes"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="session" type="lheo:session-type"/>
+  
+  <xs:complexType name="adresse-inscription-type">
+    <xs:sequence>
+      <xs:element ref="lheo:adresse" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="adresse-inscription" type="lheo:adresse-inscription-type"/>
+  
+  <xs:complexType name="adresse-information-type">
+    <xs:sequence>
+      <xs:element ref="lheo:adresse" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="adresse-information" type="lheo:adresse-information-type"/>
+  
+  <xs:complexType name="date-information-type">
+    <xs:sequence>
+      <xs:element ref="lheo:date" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="date-information" type="lheo:date-information-type"/>
+
+  <xs:complexType name="url-action-type">
+    <xs:sequence>
+      <xs:element ref="lheo:urlweb" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="url-action" type="lheo:url-action-type"/>
+
+  <xs:complexType name="SIRET-organisme-formation-type">
+    <xs:sequence>
+      <xs:element ref="lheo:SIRET" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SIRET-organisme-formation" type="lheo:SIRET-organisme-formation-type"/>
+  
+  <xs:simpleType name="modalites-recrutement-type">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3000"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="modalites-recrutement" type="lheo:modalites-recrutement-type"/>
+  
+  <xs:simpleType name="modalites-pedagogiques-type">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="200"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="modalites-pedagogiques" type="lheo:modalites-pedagogiques-type"/>
+ 
+  <xs:simpleType name="code-perimetre-recrutement-type">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="0"/>
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="5"/>
+      <xs:enumeration value="6"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="code-perimetre-recrutement" type="lheo:code-perimetre-recrutement-type"/>
+  
+  <xs:simpleType name="infos-perimetre-recrutement-type">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="infos-perimetre-recrutement" type="lheo:infos-perimetre-recrutement-type"/>
+  
+  <xs:simpleType name="nombre-heures-centre-type">
+    <xs:restriction base="xs:long"/>
+  </xs:simpleType>
+  <xs:element name="nombre-heures-centre" type="lheo:nombre-heures-centre-type"/>
+  
+  <xs:simpleType name="nombre-heures-entreprise-type">
+    <xs:restriction base="xs:long"/>
+  </xs:simpleType>
+  <xs:element name="nombre-heures-entreprise" type="lheo:nombre-heures-entreprise-type"/>
+  
+  <xs:simpleType name="restauration-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="250"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="restauration" type="lheo:restauration-type"/>
+ 
+  <xs:simpleType name="hebergement-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="250"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="hebergement" type="lheo:hebergement-type"/>
+  
+  <xs:simpleType name="transport-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="250"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="transport" type="lheo:transport-type"/>
+  
+  <xs:simpleType name="acces-handicapes-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="250"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="acces-handicapes" type="lheo:acces-handicapes-type"/>
+  
+  <xs:simpleType name="etat-recrutement-type">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="etat-recrutement" type="lheo:etat-recrutement-type"/>
+  
+<xs:simpleType name="code-CERTIFINFO-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="6"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="code-CERTIFINFO" type="lheo:code-CERTIFINFO-type"/>
+  
+  <xs:attributeGroup name="coordonnees-attributes">
+    <xs:attribute name="numero" type="xs:string" use="required"/>
+  </xs:attributeGroup>
+  <xs:complexType name="coordonnees-subtype">
+    <xs:sequence>
+      <xs:element ref="lheo:nom" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:prenom" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:adresse" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:telfixe" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:portable" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:courriel" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:extras" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="coordonnees-type">
+    <xs:complexContent>
+      <xs:extension base="lheo:coordonnees-subtype">
+        <xs:attributeGroup ref="lheo:coordonnees-attributes"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="coordonnees" type="lheo:coordonnees-type"/>
+  
+  <xs:simpleType name="SIRET-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="14"/>
+      <xs:maxLength value="14"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SIRET" type="lheo:SIRET-type"/>
+  
+  <xs:attributeGroup name="adresse-attributes">
+    <xs:attribute name="numero" type="xs:string" use="required"/>
+  </xs:attributeGroup>
+  <xs:complexType name="adresse-subtype">
+    <xs:sequence>
+      <xs:element ref="lheo:ligne" minOccurs="1" maxOccurs="3"/>
+      <xs:element ref="lheo:codepostal" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:ville" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:pays" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:geolocalisation" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:extras" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adresse-type">
+    <xs:complexContent>
+      <xs:extension base="lheo:adresse-subtype">
+        <xs:attributeGroup ref="lheo:adresse-attributes"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="adresse" type="lheo:adresse-type"/>
+  
+  <xs:simpleType name="ligne-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ligne" type="lheo:ligne-type"/>
+  
+  <xs:simpleType name="prenom-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="prenom" type="lheo:prenom-type"/>
+  
+  <xs:simpleType name="nom-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="nom" type="lheo:nom-type"/>
+  
+  <xs:simpleType name="codepostal-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="5"/>
+      <xs:maxLength value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="codepostal" type="lheo:codepostal-type"/>
+  
+  <xs:simpleType name="ville-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ville" type="lheo:ville-type"/>
+  
+  <xs:simpleType name="pays-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="2"/>
+      <xs:maxLength value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="pays" type="lheo:pays-type"/>
+  
+  <xs:complexType name="geolocalisation-type">
+    <xs:sequence>
+      <xs:element ref="lheo:latitude" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="lheo:longitude" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="geolocalisation" type="lheo:geolocalisation-type"/>
+
+  <xs:simpleType name="latitude-type">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="latitude" type="lheo:latitude-type"/>
+  
+  <xs:simpleType name="longitude-type">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="longitude" type="lheo:longitude-type"/>
+  
+  <xs:simpleType name="courriel-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3"/>
+      <xs:maxLength value="160"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="courriel" type="lheo:courriel-type"/>
+  
+  <xs:simpleType name="urlweb-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3"/>
+      <xs:maxLength value="400"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="urlweb" type="lheo:urlweb-type"/>
+  
+  <xs:complexType name="telfixe-type">
+    <xs:sequence>
+      <xs:element ref="lheo:numtel" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="telfixe" type="lheo:telfixe-type"/>
+
+  <xs:complexType name="portable-type">
+    <xs:sequence>
+      <xs:element ref="lheo:numtel" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="portable" type="lheo:portable-type"/>
+
+  <xs:simpleType name="numtel-type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="25"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="numtel" type="lheo:numtel-type"/>
+  
+  <xs:complexType name="periode-type">
+    <xs:sequence>
+      <xs:element ref="lheo:debut" minOccurs="0" maxOccurs="1"/>
+      <xs:element ref="lheo:fin" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="periode" type="lheo:periode-type"/>
+
+  <xs:simpleType name="debut-type">
+    <xs:restriction base="xs:token">
+      <xs:length value="8"/>
+      <xs:pattern value="[0-9][0-9][0-9][0-9][019][0-9][01239][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="debut" type="lheo:debut-type"/>
+  
+  <xs:simpleType name="fin-type">
+    <xs:restriction base="xs:token">
+      <xs:length value="8"/>
+      <xs:pattern value="[0-9][0-9][0-9][0-9][019][0-9][01239][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="fin" type="lheo:fin-type"/>
+  
+  <xs:simpleType name="date-type">
+    <xs:restriction base="xs:token">
+      <xs:length value="8"/>
+      <xs:pattern value="[0-9][0-9][0-9][0-9][019][0-9][01239][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="date" type="lheo:date-type"/>
+
+  <xs:attributeGroup name="extras-attributes">
+    <xs:attribute name="numero" type="xs:string"/>
+    <xs:attribute name="info" type="xs:string"/>
+  </xs:attributeGroup>
+  <xs:complexType name="extras-subtype">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="lheo:extras"/>
+      <xs:element ref="lheo:extra"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="extras-type">
+    <xs:complexContent>
+      <xs:extension base="lheo:extras-subtype">
+        <xs:attributeGroup ref="lheo:extras-attributes"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="extras" type="lheo:extras-type"/>
+  <xs:attributeGroup name="extra-attributes">
+    <xs:attribute name="numero" type="xs:string"/>
+    <xs:attribute name="info" type="xs:string"/>
+  </xs:attributeGroup>
+  <xs:complexType name="extra-type">
+    <xs:complexContent>
+      <xs:extension base="xs:anyType">
+        <xs:attributeGroup ref="lheo:extra-attributes"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="extra" type="lheo:extra-type"/>
+</xs:schema>

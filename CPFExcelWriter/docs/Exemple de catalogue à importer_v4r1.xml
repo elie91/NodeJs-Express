@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<lheo xmlns="https://www.of.moncompteformation.gouv.fr">
+<offres>
+		<formation numero="000499-01_11_NCAE" datemaj="20180118" datecrea="20071126">
+			<intitule-formation>L'intitulé de la formation</intitule-formation>
+			<objectif-formation><![CDATA[<ul><li>Objectif pédagogique 1</li><li>Objectif pédagogique 2</li><li>Objectif pédagogique 3</li><li>Objectif pédagogique 4</li></ul>]]></objectif-formation>
+			<resultats-attendus>La description des résultats attendus de la formation</resultats-attendus>
+			<contenu-formation><![CDATA[<p><strong>Titre Module 1</strong></p><p>- sujet traité dans le module 1<strong>, </strong></p><p>- sujet traité dans le module 1,</p><p>- sujet traité dans le module 1,</p><p>- sujet traité dans le module 1.</p><p style="margin-left: 18pt"> </p><p><strong>Titre du module 2 : </strong></p><p>- sujet traité dans le module 2.</p><p style="margin-left: 18pt"> </p><p><strong>Titre du module 3 : </strong></p><p>- sujet traité dans le module 3,</p><p>- sujet traité dans le module 3,</p><p>- sujet traité dans le module 3,</p><p>- sujet traité dans le module 3,</p><p>- sujet traité dans le module 3.</p><p style="margin-left: 18pt"> </p><p><strong>Titre du module 4 : </strong></p><p><strong>- </strong>-sujet traité dans le module 4.</p><p> </p><p>Evaluation : <font size="2">Evaluation de la pratique mise en oeuvre en formation.</font><font face="Arial,sans-serif" size="2"><span style="font-size: 10pt">. Attestation de réussite<span _fck_bookmark="1" style="display: none"> </span></span></font></p>]]></contenu-formation>
+			<parcours-de-formation>1</parcours-de-formation>
+			<objectif-general-formation>2</objectif-general-formation>
+			<certification>
+				<code-CERTIFINFO>12345</code-CERTIFINFO>
+			</certification>
+			<action numero="9101018127" datemaj="20180621" datecrea="20180525">
+				<niveau-entree-obligatoire>0</niveau-entree-obligatoire>
+				<modalites-enseignement>0</modalites-enseignement>
+				<conditions-specifiques>Savoirs et savoir-faire prérequis.</conditions-specifiques>
+				<lieu-de-formation>
+					<coordonnees  numero="91010">
+						<nom>NOM</nom>
+						<prenom>Prénom</prenom>
+						<adresse numero="2">
+							<ligne>MONORGANISMEFORMATION</ligne>
+							<codepostal>91510</codepostal>
+							<ville>LARDY</ville>
+							<geolocalisation>
+								<latitude>48.5289647</latitude>
+								<longitude>2.2961574</longitude>
+							</geolocalisation>
+							<extras info="adresse">
+								<extra info="numero-voie">12</extra>
+								<extra info="code-nature-voie">RUE</extra>
+								<extra info="libelle-voie">du général Leclerc</extra>
+								<extra info="accessibilite-batimentaire"> rampe d'accès et ascenseur</extra>	
+								<extra info="conformite-reglementaire">1</extra>	
+							</extras>
+						</adresse>
+						<telfixe>
+							<numtel>0123456789</numtel>
+						</telfixe>
+						<courriel>fraise.sirop@monorganismeformation.fr</courriel>
+					</coordonnees>
+				</lieu-de-formation>
+				<modalites-entrees-sorties>0</modalites-entrees-sorties>
+				<url-action>
+					<urlweb>https://www.monorganismeformation.fr/formationcertifiantes/exemple</urlweb>
+				</url-action>
+				<session numero="9101018127" datemaj="20180621" datecrea="20180525">
+					<periode>
+						<debut>20191217</debut>
+						<fin>20191219</fin>
+					</periode>
+					<adresse-inscription>
+						<adresse numero="2">
+							<ligne>MONORGANISMEFORMATION</ligne>
+							<codepostal>91510</codepostal>
+							<ville>LARDY</ville>
+							<geolocalisation>
+								<latitude>48.5289647</latitude>
+								<longitude>2.2961574</longitude>
+							</geolocalisation>
+							<extras info="adresse">
+								<extra info="numero-voie">12</extra>
+								<extra info="code-nature-voie">RUE</extra>
+								<extra info="libelle-voie">du général Leclerc</extra>
+								<extra info="accessibilite-batimentaire"> rampe d'accès et ascenseur</extra>	
+								<extra info="conformite-reglementaire">1</extra>	
+							</extras>
+						</adresse>
+					</adresse-inscription>
+					<etat-recrutement>1</etat-recrutement>
+					<extras info="session">
+						<extra info="contact-inscription">
+							<coordonnees  numero="892">
+								<nom>Nom</nom>
+								<prenom>Prénom</prenom>
+								<telfixe>
+									<numtel>0123444444</numtel>
+								</telfixe>
+								<courriel>fraise.sirop@monorganismeformation.fr</courriel>
+							</coordonnees>
+						</extra>
+						<extra info="garantie">1</extra>
+						<extra info="modalites-particulieres">Modalités particulières de la session de formation</extra>
+					</extras>					
+				</session>
+				<adresse-information> 
+					<adresse numero="5">
+						<ligne>MONORGANISMEFORMATION</ligne>
+						<codepostal>91510</codepostal>
+						<ville>LARDY</ville>
+						<geolocalisation>
+							<latitude>48.5289647</latitude>
+							<longitude>2.2961574</longitude>
+						</geolocalisation>
+						<extras info="adresse">
+							<extra info="ligne5-adresse">BP 202</extra>
+							<extra info="conformite-reglementaire">0</extra>	
+						</extras>
+					</adresse>
+				</adresse-information>
+				<restauration>Restauration possible</restauration>
+				<hebergement>Hébergement possible</hebergement>
+				<transport>0</transport>
+				<acces-handicapes>0</acces-handicapes> 
+				<langue-formation>FR</langue-formation>
+				<modalites-recrutement>Aucune</modalites-recrutement>
+				<modalites-pedagogiques>Stage en présentiel.</modalites-pedagogiques>
+				<code-perimetre-recrutement>4</code-perimetre-recrutement> 
+				<infos-perimetre-recrutement>Région Ile de France</infos-perimetre-recrutement> 
+				<nombre-heures-centre>21</nombre-heures-centre>
+				<nombre-heures-entreprise>0</nombre-heures-entreprise>
+				<extras info="action">
+					<extra info="contact-information">
+							<coordonnees  numero="104">
+								<nom>Nom</nom>
+								<prenom>Prénom</prenom>
+								<telfixe>
+									<numtel>0122222222</numtel>
+								</telfixe>
+								<courriel>fraise.sirop@monorganismeformation.fr</courriel>
+							</coordonnees>
+							<extras info="coordonnees">
+								<extra info="fonction">responsable information du public</extra>	
+							</extras>
+					</extra>
+					<extra info="modalites-handicap">modalités adaptées aux personnes en situation de handicap </extra> 
+					<extra info="info-admission">Information sur l'admission</extra>
+					<extras info="codes-modalites-admission">
+						<extra info="code-modalites-admission">92002</extra>
+						<extra info="code-modalites-admission">92005</extra>
+					</extras>
+					<extra info="code-gfe">8</extra>
+					<extra info="code-type-horaires">1</extra>
+					<extra info="duree-apprentissage">0</extra>
+					<extras info="codes-rythme-formation">
+						<extra info="code-rythme-formation">1</extra>
+						<extra info="code-rythme-formation">5</extra>
+					</extras>
+					<extra info="frais-anpec">0</extra>
+					<extra info="frais-certif-inclus-frais-anpec">0</extra>
+					<extra info="detail-frais-anpec">Frais de transport jusqu'au centre de formation et de trajet pendant la formation non pris en charge</extra>
+					<extra info="code-modele-economique">1</extra>
+					<extra info="autres-services">néant</extra>
+					<extras info="frais-pedagogiques">
+						<extra info="taux-tva">20.0</extra>
+						<extra info="frais-ht">500.50</extra>
+						<extra info="frais-ttc">600.60</extra>
+					</extras>
+					<extra info="existence-prerequis">0</extra>
+				</extras>
+			</action>
+			<organisme-formation-responsable>
+				<SIRET-organisme-formation>
+					<SIRET>12312312300000</SIRET>
+				</SIRET-organisme-formation>
+			</organisme-formation-responsable>
+			<extras info="formation">
+				<extra info="resume-contenu">Résumé du contenu de la formation</extra>
+			</extras>	
+        </formation>
+    </offres>
+</lheo>
